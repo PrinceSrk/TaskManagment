@@ -41,7 +41,7 @@ public class TaskRepo : ITaskRepo
         }
     }
 
-    public async Task<List<TaskResponseSp>> GetAllTaskByStatus(string OrderStatus)
+    public async Task<List<TaskResponseSp>> GetAllTaskByStatus(string? OrderStatus)
     {
         try
         {
@@ -61,21 +61,4 @@ public class TaskRepo : ITaskRepo
         }
     }
     
-    public async Task<List<TaskResponseSp>> GetAllTask()
-    {
-        try
-        {
-            using SqlConnection conn = new SqlConnection(_connectionString);
-
-            IEnumerable<TaskResponseSp> tasks =
-                    await conn.QueryAsync<TaskResponseSp>("GetAllTasks",
-                                                           commandType: CommandType.StoredProcedure);
-            return tasks.ToList();                                                                           
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
-    }
 }

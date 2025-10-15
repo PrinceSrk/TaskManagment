@@ -19,7 +19,7 @@ public class AuthController : ControllerBase
     [HttpPost("UserRegistration")]
     public async Task<IActionResult> UserRegistration([FromBody] UserRegisterDto dto)
     {
-        APIResponse<int> resoponse = await _authService.UserRegistration(dto);
+        ApiResponse<int> resoponse = await _authService.UserRegistration(dto);
         return HandleResponse(resoponse);
     }
 
@@ -30,7 +30,7 @@ public class AuthController : ControllerBase
         return HandleResponse(resoponse); 
     }
 
-    public IActionResult HandleResponse<T>(APIResponse<T> resoponse)
+    public IActionResult HandleResponse<T>(ApiResponse<T> resoponse)
     {
         if (!resoponse.error_status)
         {

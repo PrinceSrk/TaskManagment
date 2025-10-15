@@ -16,10 +16,10 @@ public class UserRegisterDto
 
 public class TaskRequestDto
 {
-    public int TaskId { get; set; }
+    public int? TaskId { get; set; }
     public string? title { get; set; }
     public string? description { get; set; }
-    public int assignTo { get; set; }
+    public int? assignTo { get; set; }
     public string? status { get; set; }
-    public DateOnly dueDate { get; set; }
+    public DateOnly? dueDate { get; set; }
 }

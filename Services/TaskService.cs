@@ -1,85 +1,61 @@
-using TaskManagment.Dto.RequestDto;
-using TaskManagment.Dto.ResponseDto;
-using TaskManagment.Extensions;
-using TaskManagment.Interfaces;
+    using TaskManagment.Dto.RequestDto;
+    using TaskManagment.Dto.ResponseDto;
+    using TaskManagment.Extensions;
+    using TaskManagment.Interfaces;
 
-namespace TaskManagment.Services;
+    namespace TaskManagment.Services;
 
-public class TaskService : ITaskService
-{
-    private readonly ITaskRepo _taskRepo;
-    public TaskService( ITaskRepo taskRepo)
+    public class TaskService : ITaskService
     {
-        _taskRepo = taskRepo;
-    }
-
-    public async Task<APIResponse<int>> UpdateTask(int TaskId, TaskRequestDto taskDto)
-    {
-        if (taskDto == null)
+        private readonly ITaskRepo _taskRepo;
+        public TaskService( ITaskRepo taskRepo)
         {
-            return APIResponse<int>.FailureResponse("taskdto is null");
+            _taskRepo = taskRepo;
         }
 
-        Models.Task newTask = new Models.Task
+        public async Task<ApiResponse<int>> UpdateTask(int TaskId, TaskRequestDto taskDto)
         {
-            TaskId = TaskId,
-            Title = taskDto.title ?? string.Empty,
-            Description = taskDto.description,
-            AssignedTo = taskDto.assignTo,
-            Status = taskDto.status ?? string.Empty,
-        };
-
-        int taskId = await _taskRepo.AddNewTask(newTask);
-        return APIResponse<int>.SuccesResponse(taskId, "Task created or modifier succesfuly!!");
-    }
-
-    public async Task<APIResponse<List<TaskResponse>>> GetTasks(string OrderStatus)
-    {
-        List<TaskResponseSp> data = await _taskRepo.GetAllTaskByStatus(OrderStatus);
-
-        if (!data.Any())
-        {
-            return APIResponse<List<TaskResponse>>.FailureResponse("Currently no tasks avilable");
-        }
-
-        List<TaskResponse> response = data.GroupBy(u => new { u.status }).Select(g => new TaskResponse
-        {
-            status = g.Key.status,
-            taskData = g.Select(v => new TaskResponseSp
+            if (taskDto == null)
             {
-                status = v.status,
-                TaskId = v.TaskId,
-                Title = v.Title,
-                Name = v.Name
-            }).ToList()
-        }).ToList();
+                return ApiResponse<int>.FailureResponse("taskdto is null");
+            }
 
-        return APIResponse<List<TaskResponse>>.SuccesResponse(response, "Recored List Succesfully");
-    }
+            Models.Task newTask = new Models.Task
+            {
+                TaskId = TaskId,
+                Title = taskDto.title ?? string.Empty,
+                Description = taskDto.description,
+                AssignedTo = taskDto.assignTo,
+                Status = taskDto.status ?? string.Empty,
+            };
 
-    public async Task<APIResponse<List<TaskResponse>>> GetAllTasks()
-    {
-        List<TaskResponseSp> data = await _taskRepo.GetAllTask();
-
-        if (!data.Any())
-        {
-            return APIResponse<List<TaskResponse>>.FailureResponse("Currently no tasks avilable");
+            int taskId = await _taskRepo.AddNewTask(newTask);
+            return ApiResponse<int>.SuccesResponse(taskId, "Task created or modifier succesfuly!!");
         }
 
-        List<TaskResponse> response = data.GroupBy(u => new { u.status }).Select(g => new TaskResponse
+        public async Task<ApiResponse<List<TaskResponse>>> GetTasks(string? OrderStatus)
         {
-            status = g.Key.status,
-            taskData = g.Select(v => new TaskResponseSp
-            {
-                status = v.status,
-                TaskId = v.TaskId,
-                Title = v.Title,
-                Name = v.Name
-            }).ToList()
-        }).ToList();
+            List<TaskResponseSp> data = await _taskRepo.GetAllTaskByStatus(OrderStatus);
 
-        return APIResponse<List<TaskResponse>>.SuccesResponse(response,"Recored List Succesfully");
-    }
+            if (!data.Any())
+            {
+                return ApiResponse<List<TaskResponse>>.FailureResponse("Currently no tasks avilable");
+            }
+
+            List<TaskResponse> response = data.GroupBy(u => new { u.status }).Select(g => new TaskResponse
+            {
+                status = g.Key.status,
+                taskData = g.Select(v => new TaskResponseSp
+                {
+                    status = v.status,
+                    TaskId = v.TaskId,
+                    Title = v.Title,
+                    Name = v.Name
+                }).ToList()
+            }).ToList();
+
+            return ApiResponse<List<TaskResponse>>.SuccesResponse(response, "Recored List Succesfully");
+        }
 }
 
 

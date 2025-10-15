@@ -5,6 +5,6 @@ namespace TaskManagment.Interfaces;
 
 public interface IAuthService
 {
-    Task<APIResponse<int>> UserRegistration(UserRegisterDto dto);
-    Task<APIResponse<LoginResponse>> UserLogin(LoginDto loginDto);
+    Task<ApiResponse<int>> UserRegistration(UserRegisterDto dto);
+    Task<ApiResponse<LoginResponse>> UserLogin(LoginDto loginDto);
 }

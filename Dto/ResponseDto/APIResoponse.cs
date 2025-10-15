@@ -1,14 +1,14 @@
 namespace TaskManagment.Dto.ResponseDto;
 
-public class APIResponse<T>
+public class ApiResponse<T>
 {
     public bool error_status { get; set; }
     public string? Message { get; set; }
     public T? Data { get; set; }
 
-    public static APIResponse<T> SuccesResponse(T data, string message)
+    public static ApiResponse<T> SuccesResponse(T data, string message)
     {
-        return new APIResponse<T>
+        return new ApiResponse<T>
         {
             error_status = false,
             Message = message,
@@ -16,9 +16,9 @@ public class APIResponse<T>
         };
     }
 
-     public static APIResponse<T> FailureResponse( string message)
+     public static ApiResponse<T> FailureResponse( string message)
     {
-        return new APIResponse<T>
+        return new ApiResponse<T>
         {
             error_status = true,
             Message = message,

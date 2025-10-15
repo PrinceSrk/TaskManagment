@@ -1,0 +1,7 @@
+organization=princesrk
+projectKey=PrinceSrk_TaskManagment
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.68661
+dashboardUrl=https://sonarcloud.io/dashboard?id=PrinceSrk_TaskManagment
+ceTaskId=AZnnAi1dNjrmPl3M-edb
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZnnAi1dNjrmPl3M-edb

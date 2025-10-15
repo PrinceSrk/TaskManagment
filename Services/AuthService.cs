@@ -14,11 +14,11 @@ public class AuthService : IAuthService
         _authRepo = authRepo;
     }
 
-    public async Task<APIResponse<int>> UserRegistration(UserRegisterDto dto)
+    public async Task<ApiResponse<int>> UserRegistration(UserRegisterDto dto)
     {
         if (dto == null)
         {
-            return APIResponse<int>.FailureResponse("User Registration data is null");
+            return ApiResponse<int>.FailureResponse("User Registration data is null");
         }
 
         User newUser = new User
@@ -31,14 +31,14 @@ public class AuthService : IAuthService
 
         int userId = await _authRepo.AddNewUser(newUser);
 
-        return APIResponse<int>.SuccesResponse(userId, "User Registration Succesfully");
+        return ApiResponse<int>.SuccesResponse(userId, "User Registration Succesfully");
     }
 
-    public async Task<APIResponse<LoginResponse>> UserLogin(LoginDto loginDto)
+    public async Task<ApiResponse<LoginResponse>> UserLogin(LoginDto loginDto)
     {
         if (loginDto == null)
         {
-            return APIResponse<LoginResponse>.FailureResponse("login data is null");
+            return ApiResponse<LoginResponse>.FailureResponse("login data is null");
         }
 
         User user = new User
@@ -51,10 +51,10 @@ public class AuthService : IAuthService
 
         if (response.Token == "Null")
         {
-            return APIResponse<LoginResponse>.FailureResponse("Invalid Credentials!!");
+            return ApiResponse<LoginResponse>.FailureResponse("Invalid Credentials!!");
         }
 
-       return APIResponse<LoginResponse>.SuccesResponse(response, "User LoginSuccesfully");
+       return ApiResponse<LoginResponse>.SuccesResponse(response, "User LoginSuccesfully");
     }
 }
 

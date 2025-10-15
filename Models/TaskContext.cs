@@ -19,8 +19,6 @@ public partial class TaskContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=SRKSUR5135LT;Database=Task;User ID=sa;Password=Prince@2003;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -50,8 +48,6 @@ public partial class TaskContext : DbContext
             entity.Property(e => e.Role).HasMaxLength(50);
         });
 
-        OnModelCreatingPartial(modelBuilder);
     }
 
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-}
+ }

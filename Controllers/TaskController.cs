@@ -21,25 +21,18 @@ public class TaskController : ControllerBase
     [HttpPut(V1)]
     public async Task<IActionResult> UpdateTask(int TaskId, [FromBody] TaskRequestDto taskDto)
     {
-        APIResponse<int> response = await _taskService.UpdateTask(TaskId, taskDto);
+        ApiResponse<int> response = await _taskService.UpdateTask(TaskId, taskDto);
         return HandleResponse(response);
     }
 
     [HttpGet(V2)]
     public async Task<IActionResult> GetTasks([FromQuery] string? status)
     {
-        APIResponse<List<TaskResponse>> resoponse = await _taskService.GetTasks(status ?? string.Empty);
+        ApiResponse<List<TaskResponse>> resoponse = await _taskService.GetTasks(status);
         return HandleResponse(resoponse);
     }
 
-    [HttpGet]
-    public async Task<IActionResult> GetAllTasks()
-    {
-        APIResponse<List<TaskResponse>> resoponse = await _taskService.GetAllTasks();
-        return HandleResponse(resoponse);
-    }
-
-    public IActionResult HandleResponse<T>(APIResponse<T> resoponse)
+    public IActionResult HandleResponse<T>(ApiResponse<T> resoponse)
     {
         if (!resoponse.error_status)
         {
