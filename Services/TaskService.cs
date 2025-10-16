@@ -1,4 +1,5 @@
-    using TaskManagment.Dto.RequestDto;
+using AutoMapper;
+using TaskManagment.Dto.RequestDto;
     using TaskManagment.Dto.ResponseDto;
     using TaskManagment.Extensions;
     using TaskManagment.Interfaces;
@@ -8,26 +9,30 @@
     public class TaskService : ITaskService
     {
         private readonly ITaskRepo _taskRepo;
-        public TaskService( ITaskRepo taskRepo)
+        private readonly IMapper _mapper;
+        public TaskService( ITaskRepo taskRepo, IMapper mapper)
         {
             _taskRepo = taskRepo;
+            _mapper = mapper;
         }
 
         public async Task<ApiResponse<int>> UpdateTask(int TaskId, TaskRequestDto taskDto)
         {
-            if (taskDto == null)
-            {
-                return ApiResponse<int>.FailureResponse("taskdto is null");
-            }
+        if (taskDto == null)
+        {
+            return ApiResponse<int>.FailureResponse("taskdto is null");
+        }
 
-            Models.Task newTask = new Models.Task
-            {
-                TaskId = TaskId,
-                Title = taskDto.title ?? string.Empty,
-                Description = taskDto.description,
-                AssignedTo = taskDto.assignTo,
-                Status = taskDto.status ?? string.Empty,
-            };
+            Models.Task newTask = _mapper.Map<Models.Task>(taskDto);    
+
+            // Models.Task newTask = new Models.Task
+            // {
+            //     TaskId = TaskId,
+            //     Title = taskDto.title ?? string.Empty,
+            //     Description = taskDto.description,
+            //     AssignedTo = taskDto.assignTo,
+            //     Status = taskDto.status ?? string.Empty,
+            // };
 
             int taskId = await _taskRepo.AddNewTask(newTask);
             return ApiResponse<int>.SuccesResponse(taskId, "Task created or modifier succesfuly!!");
@@ -37,7 +42,7 @@
         {
             List<TaskResponseSp> data = await _taskRepo.GetAllTaskByStatus(OrderStatus);
 
-            if (!data.Any())
+            if (data==null || data.Count == 0)
             {
                 return ApiResponse<List<TaskResponse>>.FailureResponse("Currently no tasks avilable");
             }

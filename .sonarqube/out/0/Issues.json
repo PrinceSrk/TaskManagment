@@ -181,6 +181,27 @@
           }
         },
         {
+          "ruleId": "S6966",
+          "level": "warning",
+          "message": "Await RunAsync instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Project/TaskManagment/TaskManagment/Program.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 1,
+                  "endLine": 43,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "CA1860",
           "level": "note",
           "message": "Prefer comparing 'Count' to 0 rather than using 'Any()', both for clarity and for performance",
@@ -202,27 +223,6 @@
             "customProperties": {
               "DiagnosticPropertyKey": "Count"
             }
-          }
-        },
-        {
-          "ruleId": "S6966",
-          "level": "warning",
-          "message": "Await RunAsync instead.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Project/TaskManagment/TaskManagment/Program.cs",
-                "region": {
-                  "startLine": 43,
-                  "startColumn": 1,
-                  "endLine": 43,
-                  "endColumn": 10
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
           }
         }
       ],

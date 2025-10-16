@@ -18,5 +18,5 @@ AC:\Project\TaskManagment\TaskManagment\Interfaces\IAuthService.csutf-8G
 GC:\Project\TaskManagment\TaskManagment\Dto\ResponseDto\LoginResponse.csutf-8O
 FC:\Project\TaskManagment\TaskManagment\Dto\ResponseDto\APIResoponse.csutf-8J
 AC:\Project\TaskManagment\TaskManagment\Dto\RequestDto\LoginDto.csutf-8M
-DC:\Project\TaskManagment\TaskManagment\Controllers\TaskController.csutf-8M
-DC:\Project\TaskManagment\TaskManagment\Controllers\AuthController.csutf-8
+DC:\Project\TaskManagment\TaskManagment\Controllers\AuthController.csutf-8M
+DC:\Project\TaskManagment\TaskManagment\Controllers\TaskController.csutf-8

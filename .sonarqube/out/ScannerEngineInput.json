@@ -34,46 +34,46 @@
     },
     {
       "key": "sonar.modules",
-      "value": "1235EE4B-0BA9-42A2-92F9-240ACC254D4C"
+      "value": "231CCB9A-D3A0-4615-B86A-CA24C7E52F42"
     },
     {
-      "key": "1235EE4B-0BA9-42A2-92F9-240ACC254D4C.sonar.projectKey",
-      "value": "PrinceSrk_TaskManagment:1235EE4B-0BA9-42A2-92F9-240ACC254D4C"
+      "key": "231CCB9A-D3A0-4615-B86A-CA24C7E52F42.sonar.projectKey",
+      "value": "PrinceSrk_TaskManagment:231CCB9A-D3A0-4615-B86A-CA24C7E52F42"
     },
     {
-      "key": "1235EE4B-0BA9-42A2-92F9-240ACC254D4C.sonar.projectName",
+      "key": "231CCB9A-D3A0-4615-B86A-CA24C7E52F42.sonar.projectName",
       "value": "TaskManagment"
     },
     {
-      "key": "1235EE4B-0BA9-42A2-92F9-240ACC254D4C.sonar.projectBaseDir",
+      "key": "231CCB9A-D3A0-4615-B86A-CA24C7E52F42.sonar.projectBaseDir",
       "value": "C:\\Project\\TaskManagment\\TaskManagment"
     },
     {
-      "key": "1235EE4B-0BA9-42A2-92F9-240ACC254D4C.sonar.working.directory",
+      "key": "231CCB9A-D3A0-4615-B86A-CA24C7E52F42.sonar.working.directory",
       "value": "C:\\Project\\TaskManagment\\TaskManagment\\.sonarqube\\out\\.sonar\\mod0"
     },
     {
-      "key": "1235EE4B-0BA9-42A2-92F9-240ACC254D4C.sonar.sourceEncoding",
+      "key": "231CCB9A-D3A0-4615-B86A-CA24C7E52F42.sonar.sourceEncoding",
       "value": "utf-8"
     },
     {
-      "key": "1235EE4B-0BA9-42A2-92F9-240ACC254D4C.sonar.tests",
+      "key": "231CCB9A-D3A0-4615-B86A-CA24C7E52F42.sonar.tests",
       "value": ""
     },
     {
-      "key": "1235EE4B-0BA9-42A2-92F9-240ACC254D4C.sonar.sources",
+      "key": "231CCB9A-D3A0-4615-B86A-CA24C7E52F42.sonar.sources",
       "value": "C:\\Project\\TaskManagment\\TaskManagment\\Controllers\\AuthController.cs,C:\\Project\\TaskManagment\\TaskManagment\\Controllers\\TaskController.cs,C:\\Project\\TaskManagment\\TaskManagment\\Dto\\RequestDto\\LoginDto.cs,C:\\Project\\TaskManagment\\TaskManagment\\Dto\\ResponseDto\\APIResoponse.cs,C:\\Project\\TaskManagment\\TaskManagment\\Dto\\ResponseDto\\LoginResponse.cs,C:\\Project\\TaskManagment\\TaskManagment\\Extensions\\IAuthRepo.cs,C:\\Project\\TaskManagment\\TaskManagment\\Extensions\\ITaskRepo.cs,C:\\Project\\TaskManagment\\TaskManagment\\Interfaces\\IAuthService.cs,C:\\Project\\TaskManagment\\TaskManagment\\Interfaces\\ITaskService.cs,C:\\Project\\TaskManagment\\TaskManagment\\Models\\Task.cs,C:\\Project\\TaskManagment\\TaskManagment\\Models\\TaskContext.cs,C:\\Project\\TaskManagment\\TaskManagment\\Models\\User.cs,C:\\Project\\TaskManagment\\TaskManagment\\Program.cs,C:\\Project\\TaskManagment\\TaskManagment\\Repository\\AuthRepo.cs,C:\\Project\\TaskManagment\\TaskManagment\\Repository\\TaskRepo.cs,C:\\Project\\TaskManagment\\TaskManagment\\Services\\AuthService.cs,C:\\Project\\TaskManagment\\TaskManagment\\Services\\TaskService.cs,C:\\Project\\TaskManagment\\TaskManagment\\obj\\Debug\\net8.0\\TaskManagment.GlobalUsings.g.cs,\"C:\\Project\\TaskManagment\\TaskManagment\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs\",C:\\Project\\TaskManagment\\TaskManagment\\obj\\Debug\\net8.0\\TaskManagment.AssemblyInfo.cs,C:\\Project\\TaskManagment\\TaskManagment\\obj\\Debug\\net8.0\\TaskManagment.MvcApplicationPartsAssemblyInfo.cs,C:\\Project\\TaskManagment\\TaskManagment\\appsettings.Development.json,C:\\Project\\TaskManagment\\TaskManagment\\appsettings.json,C:\\Project\\TaskManagment\\TaskManagment\\TaskManagment.http,C:\\Project\\TaskManagment\\TaskManagment\\Properties\\launchSettings.json,C:\\Project\\TaskManagment\\TaskManagment\\obj\\project.assets.json,C:\\Project\\TaskManagment\\TaskManagment\\obj\\TaskManagment.csproj.nuget.dgspec.json,C:\\Project\\TaskManagment\\TaskManagment\\bin\\Debug\\net8.0\\appsettings.Development.json,C:\\Project\\TaskManagment\\TaskManagment\\bin\\Debug\\net8.0\\appsettings.json,C:\\Project\\TaskManagment\\TaskManagment\\bin\\Debug\\net8.0\\TaskManagment.deps.json,C:\\Project\\TaskManagment\\TaskManagment\\bin\\Debug\\net8.0\\TaskManagment.runtimeconfig.json,C:\\Project\\TaskManagment\\TaskManagment\\bin\\Debug\\net8.0\\TaskManagment.staticwebassets.endpoints.json,C:\\Project\\TaskManagment\\TaskManagment\\obj\\Debug\\net8.0\\rjsmcshtml.dswa.cache.json,C:\\Project\\TaskManagment\\TaskManagment\\obj\\Debug\\net8.0\\rjsmrazor.dswa.cache.json,C:\\Project\\TaskManagment\\TaskManagment\\obj\\Debug\\net8.0\\rpswa.dswa.cache.json,C:\\Project\\TaskManagment\\TaskManagment\\obj\\Debug\\net8.0\\staticwebassets.build.endpoints.json,C:\\Project\\TaskManagment\\TaskManagment\\obj\\Debug\\net8.0\\staticwebassets.build.json,C:\\Project\\TaskManagment\\TaskManagment\\obj\\Debug\\net8.0\\TaskManagment.sourcelink.json"
     },
     {
-      "key": "1235EE4B-0BA9-42A2-92F9-240ACC254D4C.sonar.cs.analyzer.projectOutPaths",
+      "key": "231CCB9A-D3A0-4615-B86A-CA24C7E52F42.sonar.cs.analyzer.projectOutPaths",
       "value": "C:\\Project\\TaskManagment\\TaskManagment\\.sonarqube\\out\\0"
     },
     {
-      "key": "1235EE4B-0BA9-42A2-92F9-240ACC254D4C.sonar.cs.roslyn.reportFilePaths",
+      "key": "231CCB9A-D3A0-4615-B86A-CA24C7E52F42.sonar.cs.roslyn.reportFilePaths",
       "value": "C:\\Project\\TaskManagment\\TaskManagment\\.sonarqube\\out\\0\\Issues.json"
     },
     {
-      "key": "1235EE4B-0BA9-42A2-92F9-240ACC254D4C.sonar.cs.scanner.telemetry",
+      "key": "231CCB9A-D3A0-4615-B86A-CA24C7E52F42.sonar.cs.scanner.telemetry",
       "value": "C:\\Project\\TaskManagment\\TaskManagment\\.sonarqube\\out\\0\\Telemetry.json"
     },
     {

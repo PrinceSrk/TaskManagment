@@ -14,19 +14,19 @@
  !"#%&')+,-./0135‚ !%')+,/0L
 5C:\Project\TaskManagment\TaskManagment\Models\Task.cs 8r
 O
-AC:\Project\TaskManagment\TaskManagment\Interfaces\ITaskService.csr	O
+AC:\Project\TaskManagment\TaskManagment\Interfaces\ITaskService.csr	L
+>C:\Project\TaskManagment\TaskManagment\Extensions\IAuthRepo.csr	
+O
 AC:\Project\TaskManagment\TaskManagment\Interfaces\IAuthService.csr	
 K
->C:\Project\TaskManagment\TaskManagment\Extensions\ITaskRepo.csr	L
->C:\Project\TaskManagment\TaskManagment\Extensions\IAuthRepo.csr	
-c
+>C:\Project\TaskManagment\TaskManagment\Extensions\ITaskRepo.csr	c
 GC:\Project\TaskManagment\TaskManagment\Dto\ResponseDto\LoginResponse.cs 8r	
 o
 FC:\Project\TaskManagment\TaskManagment\Dto\ResponseDto\APIResoponse.cs 8r	
 ‚a
 AC:\Project\TaskManagment\TaskManagment\Dto\RequestDto\LoginDto.cs 8r	
-ƒ
-DC:\Project\TaskManagment\TaskManagment\Controllers\TaskController.cs 8r&	
- !#$%&'()*+x‚ %')€
+€
 DC:\Project\TaskManagment\TaskManagment\Controllers\AuthController.cs 8r#	
-!"#$%&'(*x‚#%'
+!"#$%&'(*x‚#%'ƒ
+DC:\Project\TaskManagment\TaskManagment\Controllers\TaskController.cs 8r&	
+ !#$%&'()*+x‚ %')

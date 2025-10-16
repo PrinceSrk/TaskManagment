@@ -16,7 +16,7 @@ public class ApiResponse<T>
         };
     }
 
-     public static ApiResponse<T> FailureResponse( string message)
+    public static ApiResponse<T> FailureResponse(string message)
     {
         return new ApiResponse<T>
         {
@@ -25,3 +25,4 @@ public class ApiResponse<T>
         };
     }
 }
+

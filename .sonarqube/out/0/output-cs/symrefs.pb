@@ -148,7 +148,18 @@ AC:\Project\TaskManagment\TaskManagment\Interfaces\ITaskService.cs
 
 		* 2
 
-		; F
+		; F|
+>C:\Project\TaskManagment\TaskManagment\Extensions\IAuthRepo.cs
+
+ 
+
+ 
+
+ %
+
+		 *
+
+		0 4
 AC:\Project\TaskManagment\TaskManagment\Interfaces\IAuthService.cs
 
  
@@ -170,18 +181,7 @@ AC:\Project\TaskManagment\TaskManagment\Interfaces\IAuthService.cs
 
  1
 
-: E|
->C:\Project\TaskManagment\TaskManagment\Extensions\IAuthRepo.cs
-
- 
-
- 
-
- %
-
-		 *
-
-		0 4×
+: E×
 GC:\Project\TaskManagment\TaskManagment\Dto\ResponseDto\LoginResponse.cs
 
  
@@ -205,8 +205,8 @@ GC:\Project\TaskManagment\TaskManagment\Dto\ResponseDto\LoginResponse.cs
 
  ô
 FC:\Project\TaskManagment\TaskManagment\Dto\ResponseDto\APIResoponse.cs2
- 		    F
-  		 		0 1      
+ 		    F
+  		 		0 1     
    
    
   
@@ -215,8 +215,8 @@ FC:\Project\TaskManagment\TaskManagment\Dto\ResponseDto\APIResoponse.cs2
 		2 6 
 		? F 
 
-" 1
-: A ÷
+! 0
+8 ? ÷
 AC:\Project\TaskManagment\TaskManagment\Dto\RequestDto\LoginDto.cs
 
  
@@ -247,7 +247,26 @@ AC:\Project\TaskManagment\TaskManagment\Dto\RequestDto\LoginDto.cs
 
  
 
- ¦
+ Î
+DC:\Project\TaskManagment\TaskManagment\Controllers\AuthController.cs
+
+
+
+ (
+" . + 7 *
+' 2 "
+
+% 5
+Q TI L
+ " '
+
+% .
+C K5 =
+  '
+
+!! '
+!!( )!!7 8(
+!!: C## %% '' !¦
 DC:\Project\TaskManagment\TaskManagment\Controllers\TaskController.cs
 
 
@@ -270,23 +289,4 @@ DC:\Project\TaskManagment\TaskManagment\Controllers\TaskController.cs
 
 ## '
 ##( )##7 8(
-##: C%% '' )) !Î
-DC:\Project\TaskManagment\TaskManagment\Controllers\AuthController.cs
-
-
-
- (
-" . + 7 *
-' 2 "
-
-% 5
-Q TI L
- " '
-
-% .
-C K5 =
-  '
-
-!! '
-!!( )!!7 8(
-!!: C## %% '' !
+##: C%% '' )) !
