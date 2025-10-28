@@ -16,4 +16,6 @@ public partial class User
     public string Role { get; set; } = null!;
 
     public virtual ICollection<Task> Tasks { get; set; } = new List<Task>();
+
+    public virtual ICollection<UserToken> UserTokens { get; set; } = new List<UserToken>();
 }

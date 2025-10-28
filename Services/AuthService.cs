@@ -10,11 +10,13 @@ namespace TaskManagment.Services;
 public class AuthService : IAuthService
 {
     private readonly IAuthRepo _authRepo;
+    private readonly IEmailService _emailService;
     private readonly IMapper _mapper;
-    public AuthService(IAuthRepo authRepo, IMapper mapper)
+    public AuthService(IAuthRepo authRepo, IMapper mapper , IEmailService emailService)
     {
         _authRepo = authRepo;
         _mapper = mapper;
+        _emailService = emailService;
     }
 
     public async Task<ApiResponse<int>> UserRegistration(UserRegisterDto dto)
@@ -24,14 +26,6 @@ public class AuthService : IAuthService
             return ApiResponse<int>.FailureResponse("User Registration data is null");
         }
         User newUser = _mapper.Map<User>(dto);
-
-        // User newUser = new User
-        // {
-        //     Name = dto.Name ?? string.Empty,
-        //     PasswordHash = dto.PasswordHash ?? string.Empty,
-        //     Email = dto.Email ?? string.Empty,
-        //     Role = dto.Role ?? string.Empty
-        // };
 
         int userId = await _authRepo.AddNewUser(newUser);
 
@@ -47,20 +41,40 @@ public class AuthService : IAuthService
 
         User user = _mapper.Map<User>(loginDto);
 
-        // User user = new User
-        // {
-        //     Email = loginDto.Email ?? string.Empty,
-        //     PasswordHash = loginDto.PasswordHash ?? string.Empty
-        // };
-
         LoginResponse response = await _authRepo.IsUserAutehnticate(user);
 
-        if (response.Token == "Null")
+        if (response.AccessToken == null)
         {
             return ApiResponse<LoginResponse>.FailureResponse("Invalid Credentials!!");
         }
 
-       return ApiResponse<LoginResponse>.SuccesResponse(response, "User LoginSuccesfully");
+        await _emailService.SendEmailAsync(loginDto.Email, "User Login", "User Login Sucessfully");
+
+        return ApiResponse<LoginResponse>.SuccesResponse(response, "User LoginSuccesfully");
     }
+
+    public async Task<ApiResponse<string>> UserLogout(RevokeToken revokeToken)
+    {
+        if (revokeToken == null)
+        {
+            return ApiResponse<string>.FailureResponse("Revoke token data is null");
+        }
+
+        bool success = await _authRepo.DeleteToken(revokeToken);
+
+        return ApiResponse<string>.SuccesResponse(null, "User LogOut Successfully!!");
+    }   
+    
+    public async Task<List<User>> GetActiveUsers()
+    {
+        List<User> users = await _authRepo.GetActiveUsers();
+
+        if(users == null)
+        {
+            return null;
+        }
+        return users;
+    }
+
 }
 

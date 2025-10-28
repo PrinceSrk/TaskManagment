@@ -2,8 +2,8 @@
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
   <ProjectName>TaskManagment</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
-  <ProjectType>Product</ProjectType>
-  <ProjectGuid>231ccb9a-d3a0-4615-b86a-ca24c7e52f42</ProjectGuid>
+  <ProjectType>Test</ProjectType>
+  <ProjectGuid>b6ffe696-217d-43b9-997e-3b9f2bd6d159</ProjectGuid>
   <FullPath>C:\Project\TaskManagment\TaskManagment\TaskManagment.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResultFiles>

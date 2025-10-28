@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TaskManagment.Dto.RequestDto;
 using TaskManagment.Dto.ResponseDto;
@@ -6,40 +7,38 @@ using TaskManagment.Interfaces;
 namespace TaskManagment.Controllers;
 
 [ApiController]
-[Route(V)]
+[Route("api/[controller]")]
 public class TaskController : ControllerBase
 {
-    private const string V = "api/[controller]";
-    private const string V1 = "{TaskId}";
-    private const string V2 = "status";
     private readonly ITaskService _taskService;
+
     public TaskController(ITaskService taskService)
     {
         _taskService = taskService;
     }
 
-    [HttpPut(V1)]
-    public async Task<IActionResult> UpdateTask(int TaskId, [FromBody] TaskRequestDto taskDto)
+    [Authorize(Roles = "Admin")]
+    [HttpPut("{TaskId}")]
+    public async Task<IActionResult> UpdateTask(int TaskId,[FromBody] TaskRequestDto taskDto)
     {
         ApiResponse<int> response = await _taskService.UpdateTask(TaskId, taskDto);
         return HandleResponse(response);
     }
 
-    [HttpGet(V2)]
+    [Authorize]
+    [HttpGet("status")]
     public async Task<IActionResult> GetTasks([FromQuery] string? status)
     {
-        ApiResponse<List<TaskResponse>> resoponse = await _taskService.GetTasks(status);
-        return HandleResponse(resoponse);
+        ApiResponse<List<TaskResponse>> response = await _taskService.GetTasks(status);
+        return HandleResponse(response);
     }
 
-    public IActionResult HandleResponse<T>(ApiResponse<T> resoponse)
+    private IActionResult HandleResponse<T>(ApiResponse<T> response)
     {
-        if (!resoponse.error_status)
+        if (!response.error_status)
         {
-            return Ok(resoponse);
+            return Ok(response);
         }
-        return NotFound(resoponse);
+        return NotFound(response);
     }
 }
-
-

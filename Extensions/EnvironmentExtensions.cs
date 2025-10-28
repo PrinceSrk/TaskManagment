@@ -1,3 +1,5 @@
+using TaskManagment.Middleware;
+
 namespace TaskManagment.Extensions;
 
 public static class EnvironmentExtensions
@@ -13,6 +15,7 @@ public static class EnvironmentExtensions
         app.MapControllers();
         app.UseHttpsRedirection();
         app.UseAuthentication();
+        app.UseMiddleware<TokenAuthenticationMiddleware>();
         app.UseAuthorization();
         app.UseCors("AllowAll");
         app.MapHealthChecks("/health");

@@ -5,13 +5,13 @@
   <SonarBinDir>C:\Project\TaskManagment\TaskManagment\.sonarqube\bin</SonarBinDir>
   <SonarScannerWorkingDirectory>C:\Project\TaskManagment\TaskManagment</SonarScannerWorkingDirectory>
   <JavaExePath>C:\Users\Prince.Khunt\.sonar\cache\4bafe2e94439c8193fc8c68247cb0dbaf4e80265b903288f63f128304f129bbe\OpenJDK17U-jre_x64_windows_hotspot_17.0.11_9.zip_extracted\jdk-17.0.11+9-jre/bin/java.exe</JavaExePath>
-  <EngineJarPath>C:\Users\Prince.Khunt\.sonar\cache\d1325aba22edbf70e87c3aa82fd41ab4047b0f950f2a079f3f6378bdaeabfaaa\sonarcloud-scanner-engine-11.26.0.1060.jar</EngineJarPath>
+  <EngineJarPath>C:\Users\Prince.Khunt\.sonar\cache\f5adf4f5abb91fbed2c3a1004c54604725ee77b7b25e9da95e33d23e1660be2f\sonarcloud-scanner-engine-12.0.0.1086.jar</EngineJarPath>
   <UseSonarScannerCli>false</UseSonarScannerCli>
   <ScanAllAnalysis>true</ScanAllAnalysis>
   <HasBeginStepCommandLineCredentials>true</HasBeginStepCommandLineCredentials>
   <HasBeginStepCommandLineTruststorePassword>false</HasBeginStepCommandLineTruststorePassword>
   <SonarQubeHostUrl>https://sonarcloud.io</SonarQubeHostUrl>
-  <SonarQubeVersion>8.0.0.68661</SonarQubeVersion>
+  <SonarQubeVersion>8.0.0.68787</SonarQubeVersion>
   <SonarProjectKey>PrinceSrk_TaskManagment</SonarProjectKey>
   <AdditionalConfig>
     <ConfigSetting Id="BuildUri" />
@@ -66,7 +66,7 @@
     <Property Name="sonar.cobol.byteBasedColumnCount">false</Property>
     <Property Name="sonar.cloudformation.activate">true</Property>
     <Property Name="sonar.pli.marginRight">72</Property>
-    <Property Name="sonar.cs.analyzer.architecture.staticResourceName">SonarAnalyzer.Architecture-2.7.0.6836.zip</Property>
+    <Property Name="sonar.cs.analyzer.architecture.staticResourceName">SonarAnalyzer.Architecture-2.8.0.6851.zip</Property>
     <Property Name="sonar.apex.file.suffixes">.cls,.trigger</Property>
     <Property Name="sonaranalyzer-vbnet.ruleNamespace">SonarAnalyzer.Enterprise.VisualBasic</Property>
     <Property Name="sonar.cloudformation.file.identifier">AWSTemplateFormatVersion</Property>
@@ -176,7 +176,7 @@
     <Property Name="sonar.cs.analyzer.security.pluginKey">securitycsharpfrontend</Property>
     <Property Name="sonar.organizations.anyoneCanCreate">true</Property>
     <Property Name="sonar.technicalDebt.ratingGrid">0.05,0.1,0.2,0.5</Property>
-    <Property Name="sonar.cs.analyzer.architecture.pluginVersion">2.7.0.6836</Property>
+    <Property Name="sonar.cs.analyzer.architecture.pluginVersion">2.8.0.6851</Property>
     <Property Name="sonar.lf.enableGravatar">true</Property>
     <Property Name="sonar.dre.baselineTimeout">30000</Property>
     <Property Name="sonar.docker.activate">true</Property>
@@ -206,7 +206,7 @@ Automatic Analysis will not be available between 07:00 CET and 09:00 CET</Proper
     <Property Name="sonar.maintenance_mode.link">https://community.sonarsource.com/t/sonarcloud-autoscan-maintenance-september-28th-07-00-and-09-00-cet/101442</Property>
     <Property Name="sonar.maintenance_mode.start_date">2023-09-28T09:10:00:00.000+01:00</Property>
     <Property Name="sonar.sensor.cache.baseUrl">https://api.sonarcloud.io/analysis</Property>
-    <Property Name="sonar.core.startTime">15-10-2025 13:30:40</Property>
+    <Property Name="sonar.core.startTime">16-10-2025 15:37:34</Property>
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.organization">princesrk</Property>
@@ -220,10 +220,10 @@ Automatic Analysis will not be available between 07:00 CET and 09:00 CET</Proper
       <RulesetPath>C:\Project\TaskManagment\TaskManagment\.sonarqube\conf\Sonar-cs.ruleset</RulesetPath>
       <DeactivatedRulesetPath>C:\Project\TaskManagment\TaskManagment\.sonarqube\conf\Sonar-cs-none.ruleset</DeactivatedRulesetPath>
       <AnalyzerPlugins>
-        <AnalyzerPlugin Key="architecturecsharpfrontend" Version="2.7.0.6836" StaticResourceName="SonarAnalyzer.Architecture-2.7.0.6836.zip">
+        <AnalyzerPlugin Key="architecturecsharpfrontend" Version="2.8.0.6851" StaticResourceName="SonarAnalyzer.Architecture-2.8.0.6851.zip">
           <AssemblyPaths>
-            <Path>C:\Users\Prince.Khunt\AppData\Local\Temp\.sonarqube\resources\0\Google.Protobuf.License.txt</Path>
-            <Path>C:\Users\Prince.Khunt\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.Architecture.CSharp.dll</Path>
+            <Path>C:\Users\Prince.Khunt\AppData\Local\Temp\.sonarqube\resources\5\Google.Protobuf.License.txt</Path>
+            <Path>C:\Users\Prince.Khunt\AppData\Local\Temp\.sonarqube\resources\5\SonarAnalyzer.Architecture.CSharp.dll</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
         <AnalyzerPlugin Key="securitycsharpfrontend" Version="11.10.0.40378" StaticResourceName="SonarAnalyzer.Security.CSharp-11.10.0.40378.zip">

@@ -158,90 +158,9 @@
           "properties": {
             "warningLevel": 1
           }
-        },
-        {
-          "ruleId": "S2068",
-          "level": "warning",
-          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Project/TaskManagment/TaskManagment/appsettings.json",
-                "region": {
-                  "startLine": 10,
-                  "startColumn": 26,
-                  "endLine": 10,
-                  "endColumn": 119
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S6966",
-          "level": "warning",
-          "message": "Await RunAsync instead.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Project/TaskManagment/TaskManagment/Program.cs",
-                "region": {
-                  "startLine": 43,
-                  "startColumn": 1,
-                  "endLine": 43,
-                  "endColumn": 10
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA1860",
-          "level": "note",
-          "message": "Prefer comparing 'Count' to 0 rather than using 'Any()', both for clarity and for performance",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Project/TaskManagment/TaskManagment/Services/TaskService.cs",
-                "region": {
-                  "startLine": 40,
-                  "startColumn": 18,
-                  "endLine": 40,
-                  "endColumn": 28
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "DiagnosticPropertyKey": "Count"
-            }
-          }
         }
       ],
       "rules": {
-        "CA1860": {
-          "id": "CA1860",
-          "shortDescription": "Avoid using 'Enumerable.Any()' extension method",
-          "fullDescription": "Prefer using 'IsEmpty', 'Count' or 'Length' properties whichever available, rather than calling 'Enumerable.Any()'. The intent is clearer and it is more performant than using 'Enumerable.Any()' extension method.",
-          "defaultLevel": "note",
-          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1860",
-          "properties": {
-            "category": "Performance",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Telemetry",
-              "EnabledRuleInAggressiveMode"
-            ]
-          }
-        },
         "CS8618": {
           "id": "CS8618",
           "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
@@ -253,39 +172,6 @@
             "tags": [
               "Compiler",
               "Telemetry"
-            ]
-          }
-        },
-        "S2068": {
-          "id": "S2068",
-          "shortDescription": "Hard-coded credentials are security-sensitive",
-          "fullDescription": "Because it is easy to extract strings from an application source code or binary, credentials should not be hard-coded. This is particularly true for applications that are distributed or that are open-source.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2068",
-          "properties": {
-            "category": "Blocker Security Hotspot",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S6966": {
-          "id": "S6966",
-          "shortDescription": "Awaitable method should be used",
-          "fullDescription": "In an async method, any blocking operations should be avoided.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6966",
-          "properties": {
-            "category": "Major Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
             ]
           }
         }

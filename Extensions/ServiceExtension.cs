@@ -9,6 +9,7 @@ public static class ServiceExtension
     {
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<ITaskService, TaskService>();
+        services.AddScoped<IEmailService, EmailService>();
         return services;
     }
 }

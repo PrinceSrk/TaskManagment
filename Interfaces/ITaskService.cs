@@ -5,7 +5,6 @@ namespace TaskManagment.Interfaces;
 
 public interface ITaskService
 {
-     Task<ApiResponse<int>> UpdateTask(int TaskId, TaskRequestDto taskDto);
+    Task<ApiResponse<int>> UpdateTask(int TaskId, TaskRequestDto taskDto);
     Task<ApiResponse<List<TaskResponse>>> GetTasks(string? OrderStatus);
-
 }

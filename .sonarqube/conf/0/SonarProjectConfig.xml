@@ -4,6 +4,6 @@
   <ProjectPath>C:\Project\TaskManagment\TaskManagment\TaskManagment.csproj</ProjectPath>
   <FilesToAnalyzePath>C:\Project\TaskManagment\TaskManagment\.sonarqube\conf\0\FilesToAnalyze.txt</FilesToAnalyzePath>
   <OutPath>C:\Project\TaskManagment\TaskManagment\.sonarqube\out\0</OutPath>
-  <ProjectType>Product</ProjectType>
+  <ProjectType>Test</ProjectType>
   <TargetFramework>net8.0</TargetFramework>
 </SonarProjectConfig>

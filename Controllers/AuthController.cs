@@ -26,8 +26,15 @@ public class AuthController : ControllerBase
     [HttpPost("UserLogin")]
     public async Task<IActionResult> UserLogin([FromBody] LoginDto loginDto)
     {
-        var resoponse = await _authService.UserLogin(loginDto);
-        return HandleResponse(resoponse); 
+        ApiResponse<LoginResponse> resoponse = await _authService.UserLogin(loginDto);
+        return HandleResponse(resoponse);
+    }
+
+    [HttpPost("UserLogOut")]
+    public async Task<IActionResult> UserLogout([FromBody] RevokeToken revokeToken)
+    {
+        ApiResponse<string> response = await _authService.UserLogout(revokeToken);
+        return HandleResponse(response);
     }
 
     public IActionResult HandleResponse<T>(ApiResponse<T> resoponse)

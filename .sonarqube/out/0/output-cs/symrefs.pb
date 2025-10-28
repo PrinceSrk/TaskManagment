@@ -1,40 +1,45 @@
-⁄
+Ú
 >C:\Project\TaskManagment\TaskManagment\Services\TaskService.cs
 
- (
-
-
-# ,    (&&. 7
-& .  
+		 (
+# , %% (++. 7
+! ( " )
+& .  
+8 > 
 
-, 6
-; A <
-R Y   % $  
-   4 ;
-   !!3 9
+, 6
 
-$$; C
-$$L W&&K V
-&&! %(( --* .
--- '99B J
---7 8--B C
---U V// 00 2
-00$ %22 33 44 55 Ó
+; A
+R Y ; B
+ %%4 ;
+%% &&3 9
+
+)); C
+))L W++K V(
+++! %-- -- "22* .
+22 '>>B J
+227 822B C
+22U V44 55 2
+55$ %77 88 99 :: Ü
 >C:\Project\TaskManagment\TaskManagment\Services\AuthService.cs
 
-		 (
- (    $22' 0
-! ) 
+
+
+ (
+ ( $$ $88' 0(
+ $  00 
+! ) 
+3 9 
 
-( 8<
-I L     
-   0 7
-   ""/ 5
+( 8
+I L ) ,
+ $$0 7
+$$ &&/ 5
 
-%%2 ;(
-%%E M'' .. // #
-,, 22D H
-22 44 998 @ï
+))2 ;
+))E M++ 00& .
+00 88D H
+88 :: ??8 @ï
 =C:\Project\TaskManagment\TaskManagment\Repository\TaskRepo.cs
 
 		 (
@@ -69,13 +74,11 @@
 33 (55 66 77 88 ;;$ .>> (?? )
 >> CC 
 ?? DD !
-AA "FF ã
-1C:\Project\TaskManagment\TaskManagment\Program.cs^
-		          
- 
-1 8  
-+ . @
-  "" $$ %% (( ++ ã
+AA "FF 
+1C:\Project\TaskManagment\TaskManagment\Program.cs.
+   # *
+ 
+   ã
 5C:\Project\TaskManagment\TaskManagment\Models\User.cs
 
  
@@ -92,7 +95,26 @@
 
  
 
-% *≤
+% *ó
+5C:\Project\TaskManagment\TaskManagment\Models\Task.cs
+
+ 
+
+ 
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ -≤
 <C:\Project\TaskManagment\TaskManagment\Models\TaskContext.cs
   ( 3
 5 < 
@@ -116,26 +138,7 @@
 ++ ++! "
 ,, ,,! "
 // //! "
-00 00! "ó
-5C:\Project\TaskManagment\TaskManagment\Models\Task.cs
-
- 
-
- 
-
-
-
- 
-
- 
-
- 
-
- 
-
- 
-
- -ã
+00 00! "ã
 AC:\Project\TaskManagment\TaskManagment\Interfaces\ITaskService.cs
 
  
@@ -148,18 +151,7 @@ AC:\Project\TaskManagment\TaskManagment\Interfaces\ITaskService.cs
 
 		* 2
 
-		; F|
->C:\Project\TaskManagment\TaskManagment\Extensions\IAuthRepo.cs
-
- 
-
- 
-
- %
-
-		 *
-
-		0 4
+		; F
 AC:\Project\TaskManagment\TaskManagment\Interfaces\IAuthService.cs
 
  
@@ -170,8 +162,8 @@ AC:\Project\TaskManagment\TaskManagment\Interfaces\IAuthService.cs
 
 		% .
 
-		8 @|
->C:\Project\TaskManagment\TaskManagment\Extensions\ITaskRepo.cs
+		8 @}
+?C:\Project\TaskManagment\TaskManagment\IExtensions\ITaskRepo.cs
 
  
 
@@ -181,7 +173,85 @@ AC:\Project\TaskManagment\TaskManagment\Interfaces\IAuthService.cs
 
  1
 
-: E◊
+: E}
+?C:\Project\TaskManagment\TaskManagment\IExtensions\IAuthRepo.cs
+
+ 
+
+ 
+
+ %
+
+		 *
+
+		0 4â
+EC:\Project\TaskManagment\TaskManagment\Extensions\ServiceExtension.cs
+
+ $
+
+% >(
+W _
+
+   ç
+IC:\Project\TaskManagment\TaskManagment\Extensions\RepositoryExtensions.cs
+
+ (
+
+% 8(
+Q Y		 
+
+  î
+FC:\Project\TaskManagment\TaskManagment\Extensions\LoggingExtensions.cs
+
+ %
+
+" 32
+I P  		  É
+IC:\Project\TaskManagment\TaskManagment\Extensions\HealthCheckExtension.cs
+
+ (
+
+% :
+S [		 
+
+  
+JC:\Project\TaskManagment\TaskManagment\Extensions\EnvironmentExtensions.cs
+
+ )
+
+ ,d
+A D 		 
+
+       ≠
+GC:\Project\TaskManagment\TaskManagment\Extensions\DatabaseExtensions.cs
+
+ &
+
+% 6
+O W
+
+  
+g t *
+
+
++ . £
+IC:\Project\TaskManagment\TaskManagment\Extensions\ControllerExtensions.cs
+
+ (
+
+% 8
+Q Y  
+1 8		 
+
+ y
+?C:\Project\TaskManagment\TaskManagment\Extensions\AutoMapper.cs
+
+ 
+
+% 2
+K S
+
+  ◊
 GC:\Project\TaskManagment\TaskManagment\Dto\ResponseDto\LoginResponse.cs
 
  
@@ -247,26 +317,43 @@ AC:\Project\TaskManagment\TaskManagment\Dto\RequestDto\LoginDto.cs
 
  
 
- Œ
-DC:\Project\TaskManagment\TaskManagment\Controllers\AuthController.cs
+ ß
+CC:\Project\TaskManagment\TaskManagment\Automapper\MappingProfile.cs
 
-
-
- (
-" . + 7 *
-' 2 "
-
-% 5
-Q TI L
- " '
-
-% .
-C K5 =
-  '
-
-!! '
-!!( )!!7 8(
-!!: C## %% '' !¶
+ 
+  
+' *. 1
+: =A D
+  
+& )- 0
+9 <@ C
+  
+. 15 8
+A DH K
+  
+& )- 0
+9 <@ C
+  #
++ .2 5
+> AE H
+  #
+2 59 <
+E HL O
+  #
++ .2 5
+> AE H
+  #
+1 48 ;
+D GK N
+  #
+0 37 :
+C FJ M
+  #
+, /3 6
+? BF I
+  #
+- 04 7
+@ CG J¶
 DC:\Project\TaskManagment\TaskManagment\Controllers\TaskController.cs
 
 
@@ -289,4 +376,23 @@ DC:\Project\TaskManagment\TaskManagment\Controllers\TaskController.cs
 
 ## '
 ##( )##7 8(
-##: C%% '' )) !
+##: C%% '' )) !Œ
+DC:\Project\TaskManagment\TaskManagment\Controllers\AuthController.cs
+
+
+
+ (
+" . + 7 *
+' 2 "
+
+% 5
+Q TI L
+ " '
+
+% .
+C K5 =
+  '
+
+!! '
+!!( )!!7 8(
+!!: C## %% '' !
