@@ -17,5 +17,7 @@ public partial class User
 
     public virtual ICollection<Task> Tasks { get; set; } = new List<Task>();
 
+    public virtual ICollection<UserImage> UserImages { get; set; } = new List<UserImage>();
+
     public virtual ICollection<UserToken> UserTokens { get; set; } = new List<UserToken>();
 }

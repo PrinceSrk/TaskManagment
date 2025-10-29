@@ -1,6 +1,7 @@
 using System.Data;
 using Dapper;
 using Microsoft.Data.SqlClient;
+using TaskManagment.Dto.RequestDto;
 using TaskManagment.Dto.ResponseDto;
 using TaskManagment.Extensions;
 using TaskManagment.Models;
@@ -42,6 +43,51 @@ public class AuthRepo : IAuthRepo
         }
     }
 
+    public async Task<bool> UploadImage(int userId ,UserImageUploadDto userImage)
+    {
+        try
+        {
+            using SqlConnection conn = new SqlConnection(_connectionString);
+
+            DynamicParameters parameters = new DynamicParameters();
+
+            parameters.Add("@ImageData", userImage.ImageData);
+            parameters.Add("@ContentType", userImage.ContentType);
+            parameters.Add("@UserId", userImage.UserId);
+
+             await conn.ExecuteAsync("AddUserImage",
+                                    parameters,
+                                    commandType: CommandType.StoredProcedure);
+
+            return true;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return false;
+        }
+    }
+    public async Task<List<UserImage>> GetUserImages(int userId)
+    {
+        try
+        {
+            using SqlConnection conn = new SqlConnection(_connectionString);
+
+            IEnumerable<UserImage> userImages =
+
+                    await conn.QueryAsync<UserImage>("GetUserImages",
+                                                      userId,
+                                                      commandType: CommandType.StoredProcedure);
+
+            return userImages.ToList();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+
     public async Task<LoginResponse> IsUserAutehnticate(User user)
     {
         try
@@ -75,6 +121,26 @@ public class AuthRepo : IAuthRepo
         }
         catch (Exception e)
         {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+
+    public async Task<User> GetExistingUser(string Email)
+    {
+        try
+        {
+            using SqlConnection conn = new SqlConnection(_connectionString);
+
+            User user = await conn.QueryFirstOrDefaultAsync<User>("GetUserByEmail",
+                                                                  Email,
+                                                                  commandType: CommandType.StoredProcedure);
+
+            return user;
+
+        }
+        catch (Exception e)
+        {       
             Console.WriteLine(e);
             throw;
         }
@@ -157,6 +223,7 @@ public class AuthRepo : IAuthRepo
             throw;
         }
     }
+
 
 }
 

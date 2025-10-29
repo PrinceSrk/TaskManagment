@@ -37,6 +37,20 @@ public class AuthController : ControllerBase
         return HandleResponse(response);
     }
 
+    [HttpPost("upload-user-image")]
+    public async Task<IActionResult> UploadImage(int userId,List<IFormFile> imageFile)
+    {
+        ApiResponse<List<ImageUploadResult>> response = await _authService.UploadImage(userId, imageFile);
+        return HandleResponse(response);
+    }
+
+    [HttpGet("user-images")]
+    public async Task<IActionResult> GetUserImages(int userId)
+    {
+        ApiResponse<List<UserImageDto>> response = await _authService.GetUserImages(userId);
+        return HandleResponse(response);
+    }
+
     public IActionResult HandleResponse<T>(ApiResponse<T> resoponse)
     {
         if (!resoponse.error_status)

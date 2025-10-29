@@ -18,7 +18,7 @@ public class TokenAuthenticationMiddleware
     
     public async System.Threading.Tasks.Task Invoke(HttpContext context ,TaskContext db)
     {
-        var accessToken = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
+        var accessToken = context.Request.Headers.Authorization.FirstOrDefault()?.Split(" ").Last();
         var refreshToken = context.Request.Headers["X-Refresh-Token"].FirstOrDefault();
 
         if(!string.IsNullOrEmpty(accessToken))
@@ -33,8 +33,8 @@ public class TokenAuthenticationMiddleware
                 {
                     List<Claim> claims = new List<Claim>
                     {
-                        new Claim(ClaimTypes.Email,UserAccesstoken.User.Email),
-                        new Claim(ClaimTypes.Role,UserAccesstoken.User.Role)
+                        new(ClaimTypes.Email,UserAccesstoken.User?.Email ?? string.Empty),
+                        new(ClaimTypes.Role,UserAccesstoken.User?.Role ?? string.Empty)
                     };
 
                     var identity = new ClaimsIdentity(claims, "CustomToken");
@@ -59,13 +59,13 @@ public class TokenAuthenticationMiddleware
 
                         LoginResponse newToken = await authRepo.RevokeToken(revokeToken);
 
-                        context.Response.Headers["Authorization"] = newToken.AccessToken;
+                        context.Response.Headers.Authorization = newToken.AccessToken;
                         context.Response.Headers["X-Refresh-Token"] = newToken.RefreshToken;
 
                         List<Claim> claims = new List<Claim>
                         {
-                            new Claim(ClaimTypes.Email,UserAccesstoken.User.Email),
-                            new Claim(ClaimTypes.Role,UserAccesstoken.User.Role)
+                            new(ClaimTypes.Email,UserAccesstoken.User?.Email ?? string.Empty),
+                            new(ClaimTypes.Role,UserAccesstoken.User?.Role ?? string.Empty)
                         };
 
                         var identity = new ClaimsIdentity(claims, "CustomToken");

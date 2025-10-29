@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8U4NjF7x4m4=",
+  "dgSpecHash": "xuM2uB3beS4=",
   "success": true,
   "projectFilePath": "C:\\Project\\TaskManagment\\TaskManagment\\TaskManagment.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Prince.Khunt\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\Prince.Khunt\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\Prince.Khunt\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
+    "C:\\Users\\Prince.Khunt\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Prince.Khunt\\.nuget\\packages\\bouncycastle.cryptography\\2.6.1\\bouncycastle.cryptography.2.6.1.nupkg.sha512",
     "C:\\Users\\Prince.Khunt\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Prince.Khunt\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",

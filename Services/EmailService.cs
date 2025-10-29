@@ -16,14 +16,14 @@ public class EmailService : IEmailService
     }
     public async Task SendEmailAsync(string emailTo, string subject, string body)
     {
-        MailAddress fromEmailAddress = new MailAddress(_configuration["Smtp:From"]);
+        MailAddress fromEmailAddress = new MailAddress(_configuration["Smtp:From"] ?? string.Empty);
         MailAddress toMailAddress = new MailAddress(emailTo);
-        string password = _configuration["Smtp:Password"];
+        string password = _configuration["Smtp:Password"] ?? string.Empty;
 
         SmtpClient smtpClient = new SmtpClient
         {
-            Host = _configuration["Smtp:Host"],
-            Port = int.Parse(_configuration["Smtp:Port"]),
+            Host = _configuration["Smtp:Host"] ?? string.Empty,
+            Port = int.Parse(_configuration["Smtp:Port"] ?? string.Empty),
             EnableSsl = true,
             Credentials = new NetworkCredential(fromEmailAddress.Address, password)
         };

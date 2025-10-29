@@ -8,10 +8,18 @@ public class LoginDto
 
 public class UserRegisterDto
 {
-    public string? Name { get; set; } 
-    public string? Email { get; set; } 
-    public string? PasswordHash { get; set; } 
-    public string? Role { get; set; } 
+    public string? Name { get; set; }
+    public string? Email { get; set; }
+    public string? PasswordHash { get; set; }
+    public string? Role { get; set; }
+}
+
+public class UserImageUploadDto
+{
+    public byte[]? ImageData { get; set; }
+    public string? FileName { get; set; }
+    public string? ContentType { get; set; }
+    public int? UserId { get; set; }
 }
 
 public class TaskRequestDto

@@ -7,12 +7,24 @@ public class LoginResponse
     public string? Role { get; set; }
 }
 
+public class UserImageDto
+{
+    public byte[]? ImageData { get; set; }
+    public string? ContentType { get; set; }
+}
+
+public class ImageUploadResult
+{
+    public string? FileName { get; set; }
+    public bool Status { get; set; }
+    public string? Message { get; set; }
+}
+
 public class RevokeToken
 {
     public int UserId { get; set; }
     public string? AccessToken { get; set; }
     public string? RefreshToken { get; set; }
-
 }
 
 public class TaskResponse

@@ -19,6 +19,8 @@ public partial class TaskContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
+    public virtual DbSet<UserImage> UserImages { get; set; }
+
     public virtual DbSet<UserToken> UserTokens { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -51,6 +53,23 @@ public partial class TaskContext : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.PasswordHash).HasMaxLength(255);
             entity.Property(e => e.Role).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<UserImage>(entity =>
+        {
+            entity.HasKey(e => e.UserImageId).HasName("PK__UserImag__61EA1B362120A192");
+
+            entity.ToTable("UserImage");
+
+            entity.Property(e => e.ContentType).HasMaxLength(512);
+            entity.Property(e => e.UploadDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("uploadDate");
+
+            entity.HasOne(d => d.User).WithMany(p => p.UserImages)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("FK__UserImage__UserI__75A278F5");
         });
 
         modelBuilder.Entity<UserToken>(entity =>

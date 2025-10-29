@@ -10,6 +10,7 @@ C:\Project\TaskManagment\TaskManagment\bin\Debug\net8.0\AutoMapper.dll
 C:\Project\TaskManagment\TaskManagment\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Project\TaskManagment\TaskManagment\bin\Debug\net8.0\Azure.Core.dll
 C:\Project\TaskManagment\TaskManagment\bin\Debug\net8.0\Azure.Identity.dll
+C:\Project\TaskManagment\TaskManagment\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Project\TaskManagment\TaskManagment\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 C:\Project\TaskManagment\TaskManagment\bin\Debug\net8.0\Castle.Core.dll
 C:\Project\TaskManagment\TaskManagment\bin\Debug\net8.0\Dapper.dll
